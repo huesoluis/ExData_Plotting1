@@ -1,8 +1,8 @@
 #loading data
-#edata<-read.table(file = "household_power_consumption.txt",header = TRUE,sep = ';',stringsAsFactors=FALSE)
+edata<-read.table(file = "household_power_consumption.txt",header = TRUE,sep = ';',stringsAsFactors=FALSE)
 
 #filter data by date
-#sdata<-edata[which(edata$Date == "1/2/2007" | edata$Date=="2/2/2007"),]
+sdata<-edata[which(edata$Date == "1/2/2007" | edata$Date=="2/2/2007"),]
 
 #convert power to numeric
 sdata$Global_active_power<-as.numeric(sdata$Global_active_power)
